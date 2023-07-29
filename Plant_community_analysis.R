@@ -30,6 +30,18 @@ text(ruggles.ord, display="species", col="red", pch=1, cex=0.5)
 ordiellipse(ruggles.ord, ruggles$Location, draw="polygon", col=c("darkred", "darkorange", "yellow3", "darkblue"), kind="se", 
             conf=0.999, label=TRUE)
 
+pdf("plots/NMDS_ruggles.pdf", height=7, width=6)
+plot(ruggles.ord, disp='sites', type="n")
+points(ruggles.ord, display="sites", select=which(ruggles$Location=="Cleveland Trust"), pch=19, col="darkred")
+points(ruggles.ord, display="sites", select=which(ruggles$Location=="Dover"), pch=20, col="darkorange")
+points(ruggles.ord, display="sites", select=which(ruggles$Location=="Hines Hill"), pch=21, col="yellow3")
+points(ruggles.ord, display="sites", select=which(ruggles$Location=="Rockside Road"), pch=22, col="darkblue")
+
+text(ruggles.ord, display="species", col="red", pch=1, cex=0.5)
+ordiellipse(ruggles.ord, ruggles$Location, draw="polygon", col=c("darkred", "darkorange", "yellow3", "darkblue"), kind="se", 
+            conf=0.999, label=TRUE)
+dev.off()
+
 
 ##################Putting this here because we'll need to adapt it to make a nicer figure down the line, 
 # but not going to adapt it till I know what we want to facet on
