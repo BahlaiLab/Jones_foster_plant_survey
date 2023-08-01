@@ -180,7 +180,7 @@ jones.ord$points[,1]<-(-1*jones.ord$points[,1])
 
 
 plot(jones.ord, disp='sites', type="n")
-ordihull(jones.ord, jones.env$CompactionStatus, draw="polygon", col=c("white", "white"),label=FALSE)
+ordihull(jones.ord, jones.env$CompactionStatus, draw="polygon", col=c("grey75", "white"),label=FALSE)
 points(jones.ord, display="sites", select=which(jones.env$Location=="Cleveland Trust"), pch=19, col="darkred")
 points(jones.ord, display="sites", select=which(jones.env$Location=="Dover"), pch=20, col="darkorange")
 points(jones.ord, display="sites", select=which(jones.env$Location=="Hines Hill"), pch=21, col="yellow3")
@@ -195,7 +195,7 @@ ordiellipse(jones.ord, jones.env$Location, draw="polygon", col=c("darkred", "dar
 pdf("plots/NMDS_jones.pdf", height=7, width=6)
 
 plot(jones.ord, disp='sites', type="n")
-ordihull(jones.ord, jones.env$CompactionStatus, draw="polygon", col=c("white", "white"),label=FALSE)
+ordihull(jones.ord, jones.env$CompactionStatus, draw="polygon", col=c("grey75", "white"),label=FALSE)
 points(jones.ord, display="sites", select=which(jones.env$Location=="Cleveland Trust"), pch=19, col="darkred")
 points(jones.ord, display="sites", select=which(jones.env$Location=="Dover"), pch=20, col="darkorange")
 points(jones.ord, display="sites", select=which(jones.env$Location=="Hines Hill"), pch=21, col="yellow3")
